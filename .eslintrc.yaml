@@ -1,0 +1,4 @@
+---
+rules:
+  no-use-before-define: 0  # Stepdown Rule - http://tidyjava.com/stepdown-rule/
+
