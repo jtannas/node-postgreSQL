@@ -1,15 +1,15 @@
-
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTableIfNotExists('milestones', function(table){
-      table.increments();
+      table.increments('id').primary();
       table.string('description');
-      table.string('date_achieved');
-      table.timestamps();
+      table.date('date_achieved');
     })
   ]);
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('milestones');
+  return Promise.all([
+    knex.schema.dropTable('milestones')
+  ]);
 };
