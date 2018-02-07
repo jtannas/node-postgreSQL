@@ -20,5 +20,8 @@
   "dependencies": {
     "knex": "^0.14.2",
     "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "knex-migrate": "^1.5.1"
   }
 }
